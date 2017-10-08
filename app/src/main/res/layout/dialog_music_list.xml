@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:background="#f8f9fd"
+        android:paddingLeft="17.5dp"
+        android:paddingRight="17.5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="47.5dp">
+        <ImageView
+            android:id="@+id/play_order"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textview1"
+            android:text="列表循环"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="@id/play_order"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/list_num"
+            android:text="(3)"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="@id/textview1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/clean_playlist"-->
+            <!--android:text="清空"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textColor="#333333"-->
+            <!--android:gravity="center"-->
+            <!--android:drawableLeft="@drawable/ic_empty"-->
+            <!--android:drawablePadding="8dp"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/musiclist"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"></android.support.v7.widget.RecyclerView>
+
+
+    <View
+        android:background="#999999"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+    <TextView
+        android:id="@+id/close_musiclist"
+        android:text="关闭"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ldy.ldymusicplayer.PlayMusicActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"></android.support.v7.widget.Toolbar>
+
+    <com.ldy.ldymusicplayer.utils.CircleImageView
+        android:id="@+id/cover"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:background="@mipmap/placeholder_disk_play_song"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_speed"
+        android:text="1.0X"
+        app:layout_constraintTop_toBottomOf="@+id/cover"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <SeekBar
+        android:id="@+id/speed_seekbar"
+        android:progress="50"
+        app:layout_constraintTop_toBottomOf="@+id/tv_speed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+         />
+
+    <TextView
+        android:id="@+id/tv_currentposition"
+        android:text="00:00"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/speed_seekbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/progress_seekbar"
+        app:layout_constraintTop_toTopOf="@+id/progress_seekbar"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <SeekBar
+        android:id="@+id/progress_seekbar"
+        app:layout_constraintTop_toBottomOf="@+id/speed_seekbar"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+         />
+
+    <TextView
+        android:id="@+id/all_time"
+        android:text="04:00"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/speed_seekbar"
+        app:layout_constraintLeft_toRightOf="@+id/progress_seekbar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/progress_seekbar"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_play_or_pause"
+        android:background="@mipmap/playbar_btn_play"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_play_next"
+        android:background="@mipmap/playbar_btn_next"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_play_or_pause"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_play_pre"
+        android:background="@mipmap/playbar_btn_up"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/iv_play_or_pause"
+        app:layout_constraintTop_toBottomOf="@+id/progress_seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_play_list"
+        android:background="@mipmap/list_icn_mng"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_play_next"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_play_or_pause"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_play_or_pause"
+        android:layout_marginLeft="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_play_mode"
+        android:background="@mipmap/ic_orderplay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/iv_play_pre"
+        app:layout_constraintTop_toTopOf="@+id/iv_play_or_pause"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_play_or_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</android.support.constraint.ConstraintLayout>
